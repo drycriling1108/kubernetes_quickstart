@@ -43,6 +43,7 @@ Vagrant.configure("2") do |config|
   config.vm.provision "docker"
   # Specify the shared folder mounted from the host if you like
   # By default you get "." synced as "/vagrant"
-  # config.vm.synced_folder "~/forVm", "/folder"  
+  #config.vm.synced_folder "~/forVm", "/home/vagrant/forVm"  
+  config.vm.synced_folder "/Users/nowage/work-kubernetes/forVm", "/forVm"  
   config.vm.provision "shell", inline: $script
 end
